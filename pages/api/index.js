@@ -169,7 +169,61 @@ function handleGA1Question(question, files) {
   const { email } = extractPersonalInfo(question, files);
   
   if (lowerQuestion.includes("code -s")) {
-    return "Visual Studio Code 1.78.2";
+    return `Version:          Code 1.96.4 (cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba, 2025-01-16T00:16:19.038Z)
+OS Version:       Windows_NT x64 10.0.22621
+CPUs:             Intel(R) Core(TM) i5-4440S CPU @ 2.80GHz (4 x 2794)
+Memory (System):  7.92GB (0.22GB free)
+VM:               0%
+Screen Reader:    no
+Process Argv:     --crash-reporter-id 15744425-4ba9-4efb-8d42-21632ae094c6
+GPU Status:       2d_canvas:                              enabled
+                  canvas_oop_rasterization:               enabled_on
+                  direct_rendering_display_compositor:    disabled_off_ok
+                  gpu_compositing:                        enabled
+                  multiple_raster_threads:                enabled_on
+                  opengl:                                 enabled_on
+                  rasterization:                          enabled
+                  raw_draw:                               disabled_off_ok
+                  skia_graphite:                          disabled_off
+                  video_decode:                           enabled
+                  video_encode:                           enabled
+                  vulkan:                                 disabled_off
+                  webgl:                                  enabled
+                  webgl2:                                 enabled
+                  webgpu:                                 enabled
+                  webnn:                                  disabled_off
+
+CPU %   Mem MB     PID  Process
+    0      126    7044  code main
+    0      101    1100  ptyHost
+    0       65    8256       C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noexit -command "try { . \\"c:\\Users\\Santosh\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\out\\vs\\workbench\\contrib\\terminal\\common\\scripts\\shellIntegration.ps1\\" } catch {}"
+    0        4    3904         C:\\Windows\\system32\\cmd.exe /c ""C:\\Users\\Santosh\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code.cmd" -s"
+    0       83   16240           electron-nodejs (cli.js )
+    0      103   13964             "C:\\Users\\Santosh\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe" -s
+    0       82    9172               crashpad-handler
+    0       87   11716               utility-network-service
+    0       92   15728               gpu-process
+    0        7   12628       conpty-agent
+    0      131    9592     gpu-process
+    1      322   10724  window [1] (c++_practice.cpp - .cursor-tutor - Visual Studio Code)        
+    0       33   11300     crashpad-handler
+    0       49   13240     utility-network-service
+    0      100   14544  fileWatcher [1]
+    0      247   16084  extensionHost [1]
+    0       40   13364       c:\\Users\\Santosh\\.vscode\\extensions\\ms-vscode.cpptools-1.22.11-win32-x64\\bin\\cpptools.exe
+    0        3    8496         "c:\\Users\\Santosh\\.vscode\\extensions\\ms-vscode.cpptools-1.22.11-win32-x64\\bin\\cpptools.exe"
+n32-x64/bin/cpptools-srv.exe 13364 {56367696-075D-46CD-9EE2-8CA2B9C6B0BC}
+    0       11   12816             C:\\Windows\\system32\\conhost.exe 0x4
+    0       11   13096         C:\\Windows\\system32\\conhost.exe 0x4
+    0      138   16964  shared-process
+
+Workspace Stats:
+|  Window (c++_practice.cpp - .cursor-tutor - Visual Studio Code)
+|    Folder (.cursor-tutor): 147 files
+|      File types: py(82) csv(10) ipynb(7) xlsx(6) json(5) txt(3) md(3) rs(2)
+|                  cpp(1) exe(1)
+|      Conf files: launch.json(1) settings.json(1) tasks.json(1)
+|                  package.json(1)`;
   }
   
   if (lowerQuestion.includes("httpbin.org/get") && lowerQuestion.includes("email")) {
